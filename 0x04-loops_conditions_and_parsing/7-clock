@@ -6,7 +6,7 @@ do
 	echo "Hour $i"
 	i=$(($i + 1))
 	m=1
-	while [[ $m -le 59 ]]
+	while [[ $m -lt  60 ]] 
 	do 
 		echo "$m"
 		m=$(($m + 1))
