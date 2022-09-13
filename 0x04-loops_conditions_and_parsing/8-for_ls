@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#lets display the directories 
+for x in *
+do
+	echo "$x" | cut -f 2- -d "-"
+done
