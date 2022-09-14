@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 # firebuzz
-for ((i=1;i<=100;i++))
-do 
-if [ $((i%3)) -eq 0 ]
-then
-echo -n "Fizz"
-fi
-if [ $((i%5)) -eq 0 ]
-then
-echo -n "Buzz"
-fi
-if [ $((i%3)) -ne 0 ] && [ $((i%5)) -ne 0 ]
-then
-echo -n "$i"
-fi 
-echo ""
+x=1
+while [ $x -le 100 ]
+do
+	if (( x % 15 == 0 ))
+	then
+		echo "FizzBuzz"
+	elif (( x % 3 == 0 ))
+	then
+		echo "Fizz"
+	elif (( x % 5 == 0 ))
+	then
+		echo "Buzz"
+	else 
+		echo "$x"
+	fi
+	x=$(( x + 1 ))
 done
